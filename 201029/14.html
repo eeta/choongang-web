@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .floating-box {
+                background-color: tomato;
+                float: left;
+                height: 100px;
+                width: 100px;
+            }
+            #box1 {
+                background-color: yellow;
+                border: 2px solid black;
+                overflow: hidden;    /* overflow: 자식요소가 부모요소의 범위를 초과할 때, hidden: 내용이 넘치면 자름 */
+                /*height: 150px;
+                width: 800px;*/
+            }
+            #box2 {
+                background-color: green; 
+                /* height: 150px; */
+                overflow: hidden;
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1">
+            <div class="floating-box"></div>
+            <div class="floating-box"></div>
+            <div class="floating-box"></div>
+        </div>
+        <div id="box2">
+            <div class="floating-box"></div>
+            <div class="floating-box"></div>
+        </div>
+    </body>
+</html>
