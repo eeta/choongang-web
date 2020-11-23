@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #wrapper {
+                background-color: white;
+                height: 800px;
+                width: 990px;
+            }
+            #top {
+                height: 80px;
+                width: 990px;                
+            }
+            #top-box1 {
+                float: left;
+                padding: 15px 15px 0px 20px;  
+            }
+            #top-box2 {
+                float: left;
+                padding: 46px 300px 0 0;
+            }
+            #top-box3 {
+                float: left;
+                padding: 48px 25px 10px 5px;
+            }
+            #middle {                
+                height: 550px;
+                width: 990px;
+            }
+            #m1 {
+                background-color: white;
+                height: 80px;
+                width: 990px;
+            }
+            #m1-box1 {                
+                float: left;
+                /*height: 20px;*/
+                margin: 20px 40px 0 0;
+                /*width: 158px;*/
+            }
+            #m1-box2 {
+                float: left;
+                /*height: 20px;*/
+                margin: 20px 40px 0 0;                
+                /*width: 158px;*/
+            }
+            #m1-box3 {
+                float: left;
+                height: 20px;
+                margin: 20px 40px 0 0;
+                width: 156px;
+            }
+            #m1-box4 {
+                float: left;
+                height: 20px;
+                margin: 20px 40px 0 0;
+                width: 161px;
+            }
+            #m1-box5 {
+                float: left;
+                height: 20px;
+                margin: 20px 0px 0 0;
+                width: 158px;
+            }
+            #m2 {
+                background-color: purple;
+                height: 130px;
+                margin: 0 0 10px 0;
+                width: 990px;
+            }
+            #m2-box1 {
+                float: left;
+                height: 20px;
+                
+            }
+            #m2-box2 {
+                float: left;
+                height: 20px;               
+            }
+            #m2-box3 {
+                float: left;
+                height: 20px;
+            }
+            #m3 {
+                height: 140px;
+                width: 990px;
+            }
+            #m3-box1 {
+                float: left;
+                height: 140px;
+                margin: 0 35px 0 0;
+                width: 300px;
+            }
+            #m3-box1-1 {
+                float: left;
+                height: 140px;
+                width: 30px;
+            }
+            #m3-box1-2 {
+                float: right;
+            }
+            #m3-box2 {
+                float: left;
+                height: 140px;
+                margin: 0 35px 0 0;
+                width: 300px;
+            }
+            #m3-box2-1 {
+                float: left;
+                height: 30px;
+                margin: 0 0 15px 0;
+                width: 300px;
+            }
+            #m3-box2-1-1 {
+                float: left;
+            }
+            #m3-box2-1-2 {
+                float: right;
+            }
+            #m3-box2-2 {
+                float: left;
+                height: 140px;
+                width: 300px;
+            }
+            #m3-box2-2-1 {
+                font-size: 13px;
+                float: left;
+            }
+            #m3-box2-2-2 {
+                font-size: 13px;
+                float: right;
+            }
+            #m3-box3 {
+                background-color: black;
+                float: left;
+                height: 140px;
+                width: 300px;
+            }
+            #m4 {
+                background-color: white;
+                float: left;
+                height: 160px;
+                width: 990px;
+            }
+            #m4-box1 {
+                float: left;
+                height: 170px;
+                margin: 15px 7px 15px 3px;
+                width: 175px;
+            }
+            #m4-box2 {
+                float: left;
+                height: 170px;
+                margin: 15px 7px 15px 3px;
+                width: 175px;
+            }
+            #m4-box3 {
+                float: left;
+                height: 170px;
+                margin: 15px 7px 15px 3px;
+                width: 145px;
+            }
+            #m4-box4 {
+                float: left;
+                height: 170px;
+                margin: 15px 7px 15px 3px;
+                width: 145px;
+            }
+            #m4-box5 {
+                float: left;
+                height: 170px;
+                margin: 15px 7px 15px 3px;
+                width: 145px;
+            }
+            #m4-box6 {
+                float: left;
+                /*height: 170px;*/
+                margin: 15px 7px 15px 3px;
+                /*width: 145px;*/
+            }
+            #m4-bottom {
+                background-color: turquoise;
+                height: 5px;
+                width: 990px;
+            }
+            h4 {
+                color: turquoise;
+            }
+            li {
+                font-size: 13px;
+            }
+            #bottom {
+                height: 220px;
+                float: left;
+                margin: 20px 0 0 0;
+                width: 990px;
+            }
+            #bottom-box1 {
+                float: left;
+            }
+            #bottom-box2 {
+                height: 140px;
+                float: right;
+            }
+            #bottom-box2-1 {
+                float: right;
+            }      
+            #bottom-box2-2 {
+                float: right;
+            }
+            #bottom-box2-3 {
+                float: right;
+            }
+            .boundary {
+                width: 200px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="top">
+                <div id="top-box1">
+                    <img src="../images/page-layout/logo.gif">
+                </div>
+                <div id="top-box2">
+                    <img src="../images/page-layout/moto.gif">
+                </div>
+                <div id="top-box3">
+                    로그인 | 회원 가입 | 사이트맵 | 회사 소개 
+                </div>
+            </div>
+            <div id="middle">
+                <div id="m1">
+                    <div id="m1-box1">
+                        <img src="../images/page-layout/menu01.gif">  
+                    </div>
+                    <div id="m1-box2">
+                        <img src="../images/page-layout/menu02.gif">
+                    </div>                    
+                    <div id="m1-box3">
+                        <img src="../images/page-layout/menu03.gif">
+                    </div>
+                    <div id="m1-box4">
+                        <img src="../images/page-layout/menu04.gif">
+                    </div>
+                    <div id="m1-box5">
+                        <img src="../images/page-layout//menu05.gif">
+                    </div>
+                </div>
+                <div id="m2">
+                    <div id="m2-box1">
+                        <img src="../images/page-layout/banner01.gif" height="130" width="330">
+                    </div>
+                    <div id="m2-box2">
+                        <img src="../images/page-layout/banner02.gif" height="130" width="330">
+                    </div>
+                    <div id="m2-box3">
+                        <img src="../images/page-layout/banner03.gif" height="130" width="330">
+                    </div>
+                </div>
+                <div id="m3">
+                    <div id="m3-box1">
+                        <div id="m3-box1-1">
+                            <img src="../images/page-layout/customer.gif" height="140">
+                        </div>
+                        <div id="m3-box1-2">
+                            <img src="../images/page-layout/more.gif">
+                        </div>                        
+                    </div>
+                    <div id="m3-box2">
+                        <div id="m3-box2-1">
+                            <div id="m3-box2-1-1">
+                                <img src="../images/page-layout/notice.gif">
+                            </div>
+                            <div id="m3-box2-1-2">
+                                <img src=../images/page-layout/more.gif">
+                            </div>
+                        </div>                        
+                        <div id="m3-box2-2">
+                            <div id="m3-box2-2-1">
+                                새로운 상품의 출시를 알려드립니다.<br>
+                                새로운 상품의 출시를 알려드립니다.<br>
+                                새로운 상품의 출시를 알려드립니다.<br>
+                                새로운 상품의 출시를 알려드립니다.<br>
+                            </div>
+                            <div id="m3-box2-2-2">
+                                2014-03-03<br>
+                                2014-03-03<br>
+                                2014-03-03<br>
+                                2014-03-03<br>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div id="m3-box3">
+                        <img src="../images/page-layout/banner_faq.gif" height="140" width="300">
+                    </div>
+                </div>
+                <div id="m4">
+                    <div id="m4-box1">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;손해보험 상식</h4>
+                        <ul>
+                            <li>손해보험이란?</li>
+                            <li>나에게 필요한 보험은?</li>
+                            <li>보험약관의 중요성</li>
+                            <li>손해보험의 특징</li>
+                        </ul>
+                    </div>
+                    <div id="m4-box2">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;루바토 보험의 장점</h4>
+                            <ul>
+                                <li>보험료 저렴</li>
+                                <li>신속한 처리 및 보상</li>
+                                <li>만기 시 원리금 보장</li>
+                            </ul>
+                    </div>
+                    <div id="m4-box3">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;고객센터</h4>
+                            <ul>
+                                <li>전국 지점 안내</li>
+                                <li>손해배상 안내</li>
+                                <li>손해보험 FAQ</li>
+                                <li>질문과 답변</li>
+                            </ul>
+                    </div>
+                    <div id="m4-box4">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마이페이지</h4>
+                            <ul>
+                                <li>계약 조회/변경</li>
+                                <li>보험 계약 갱신</li>
+                                <li>보험료 납입</li>
+                                <li>증명서 발급</li>
+                            </ul>
+                    </div>
+                    <div id="m4-box5">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;가입 안내</h4>
+                            <ul>
+                                <li>공인인증센터</li>
+                                <li>인증서 발급/갱신</li>
+                                <li>인증서 폐기</li>
+                                <li>웹 로그인</li>
+                            </ul>
+                    </div>
+                    <div id="m4-box6">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;회사 소개</h4>
+                            <ul>
+                                <li>기업 소개</li>
+                                <li>찾아오시는 길</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="m4-bottom"></div>
+            <div id="bottom">
+                <div id="bottom-box1">
+                    <img src="../images/page-layout/address.gif" width="650">
+                </div>
+                <div id="bottom-box2">
+                    <div class="boundary">
+                        <div id="bottom-box2-1">
+                            <img src="../images/page-layout/phonenum.gif">
+                        </div>                    
+                    </div>
+                    <div class="boundary">
+                        <div id="bottom-box2-2">
+                            <select>
+                                <option selected>네이버</option>
+                                <option>다음</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="boundary">
+                        <div id="bottom-box2-3">
+                            <img src="../images/page-layout/f.gif">
+                            <img src="../images/page-layout/b.gif">
+                            <img src="../images/page-layout/t.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
