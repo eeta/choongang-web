@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #section1 {
+                border: 3px dotted black;
+                border-width: thick;
+                overflow: hidden;
+                /* div 속성: 그 안의 박스 크기를 자동으로 따라간다. 그러나 float면 안 따라간다.
+                   -> 직접 지정하거나 overflow: hidden 사용 */
+            }
+            .article1 {
+                background-color: yellow;
+                float: left;
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="section1">
+            <div class="article1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="article1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="article1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>        
+    </body>
+</html>

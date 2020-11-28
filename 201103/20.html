@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+<script>
+    // 1. "안녕하세요"를 5번 출력하라
+    for (var i = 0; i < 5; i++) {
+        console.log("안녕하세요");
+    }
+
+    // 2. for 문을 이용해서 1부터 76까지의 합을 구하는 코드를 작성하라
+    var sum = 0;
+    for (var i = 1; i <= 76; i++) {
+        sum += i;
+    }
+    console.log(sum);
+
+    // 3. 구구단 7단을 출력하라
+    var num = 7;
+    for (var i = 1; i <= 9; i++) {
+        result = num * i;
+        console.log(num + " x " + i + " = " + result);
+    }
+
+    // 4. 구구단을 출력하라
+    var num = 2;
+    for (var i = 2; i <= 9; i++) {
+        for (var j = 1; j <= 9; j++) {
+            console.log(i + " x " + j + " = " + (i * j));
+        }
+    }
+
+    // 5. 구구단을 출력하되 7단과 6단을 제외하고 출력하라
+    var num = 2;
+    for (var i = 2; i <= 9; i++) {
+        if (i == 7 || i == 6) {
+            continue;
+        }
+        for (var j = 1; j <= 9; j++) {
+            console.log(i + " x " + j + " = " + i * j);
+        }
+    }
+
+    // 6. 863은 소수인가?
+    var value = 863;
+    var isPrime = true;
+    // for (var x = 2; x <= Math.sqrt(value); x++)
+    for (var x = 2; x < value; x++) {
+        if (value % x == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime == true) {
+        console.log(value + "는 소수입니다.");
+    } else {
+        console.log(value + "는 소수가 아닙니다.");
+    }
+
+    // 7. 2 ~ 100 사이의 소수를 구하라
+    for (var value = 2; value <= 100; value++) {
+        var isPrime = true;
+        for (x = 2; x <= Math.sqrt(value); x++) {
+            if (value % x == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log(value + "는 소수다.");
+        }
+    }
+
+    // 8. 1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...+10)의 결과를 계산하라
+    var sum = 0;
+    for (var i = 1; i <= 10; i++) {
+        for (var j = 1; j <= i; j++) {
+            sum += j;
+        }
+    }
+    console.log(sum);
+</script>
