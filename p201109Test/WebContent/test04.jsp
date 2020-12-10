@@ -8,7 +8,8 @@
 	this.test();
 %>
 
-<%! // 선언부(declaration)
+<%!
+	// 선언부(declaration)
 	private int b = 20;    // 위험한 코드            
 	public void test() {
 		System.out.println("!!!!");
@@ -24,7 +25,7 @@
 	<% 
 		// out.println("반갑습니다");
 	%>
-	<%-- JSP 주석 --%>
+	
 	<%
 		out.println(a);
 		out.println(c);
@@ -33,6 +34,7 @@
 		int c = 20;
 	%>
 	
+	<%-- JSP 주석 --%>
 	<%-- 표현식 --%>
 	<%= a %>   
 	<%= "안녕하세요" + a %>
