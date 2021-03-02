@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf=8">
+    <style>
+        #box1 {
+            background-color: cornflowerblue;
+            height: 200px;
+            width: 200px;
+        }
+
+        #box2 {
+            background-color: yellowgreen;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        function f1() {
+
+            // DOM 핵심 API
+            var box1 = document.getElementById("box1");    // 미리  내장된  / document 트리구조를 관리하는
+            var box2 = document.getElementById("box2");
+            box1.style.backgroundColor = "red";    // = 문자
+            box1.style.height = "100px";
+            box1.style.width = "100px";
+
+            box1.style.backgroundColor = getComputedStyle(box2).backgroundColor;
+            box1.style.height = "300px";
+            box1.style.width = "100px";
+
+            box1.innerText = box2.innerText;
+            // box1.innerHTML = "<h1>하하하하</h1>";    되도록 쓰지 않기
+        }
+    </script>
+</head>
+<body>
+<div id="box1">안녕하세요</div>
+<div id="box2" onclick="f1()">반갑습니다</div>
+</body>
+</html>
