@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function f1() {
+            var li = document.createElement("li");
+            li.innerText = "안녕하세요" + parseInt(Math.random() * 1000);
+            li.style.color = "red";
+            li.style.fontSize = "30px";
+            li.setAttribute("class", "xxx");
+
+            var ul1 = document.getElementById("ul1");
+            ul1.appendChild(li);
+        }
+
+        function f2() {
+            var ul1 = document.getElementById("ul1");
+            if (ul1.children.length > 0) {
+                // ul1.childNodes
+                ul1.removeChild(ul1.children[0]);    // 0번째 children을 지움...?
+            }
+        }
+
+        function f3() {
+            var ul1 = document.getElementById("ul1");
+            /*
+            var count = ul1.children.length;
+            for (var i = 0; i < count; i++) {
+                ul1.removeChild(ul1.children[0]);
+            }
+            */
+            while (ul1.children.length > 0) {
+                ul1.removeChild(ul1.children[0]);
+            }
+        }
+
+    </script>
+</head>
+<body>
+<ul id="ul1"></ul>
+<button onclick="f1()">내용 추가</button>
+<button onclick="f2()">내용 순차 삭제</button>
+<button onclick="f3()">전체 삭제</button>
+</body>
+</html>

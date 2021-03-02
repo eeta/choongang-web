@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <script>
+
+        var inter1 = null;
+
+        window.onload = function () {
+            inter1 = setInterval(countDown, 1000);
+        };
+
+        var count = 5;
+
+        function countDown() {
+            var box1 = document.getElementById("box1");
+
+            if (count <= 0) {
+                clearInterval(inter1);
+                inter1 = null;
+
+                box1.innerText = "종료 되었습니다";
+                box1.style.color = "red";
+                return;
+            }
+
+            box1.innerText = count + "";    // 숫자 + 문자  안전하게 문자로 넣으려고........
+            count--;
+        }
+
+
+    </script>
+</head>
+<body>
+<h1 id="box1">안녕하세요</h1>
+</body>
+</html>

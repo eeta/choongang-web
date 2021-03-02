@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .xxx1 {
+            color: red;
+            font-size: 30px;
+            font-family: "궁서";
+        }
+    </style>
+    <script>
+        function f1() {
+            var u1 = document.getElementById("u1");
+            var c1s = u1.getElementsByClassName("c1");
+            for (var c1 of c1s) {    // c1: element, c1s: element의 배열
+                c1.style.backgroundColor = "red";    // CSS style 컨트롤
+                c1.innerText = "하하하하";    // 내용 컨트롤
+            }
+        }
+
+        function f2() {
+            // 태그(element) 선택 -> CSS or attribute(속성), 내용 컨트롤
+            var img1 = document.getElementById("img1");
+            img1.setAttribute("src", "../images/fun/15de882435b2471ac.gif");
+            // var xxx = img1.getAttribute("src")
+            // console.log(xxx);
+            img1.setAttribute("qqq", "안녕하세요");    // 이름이 qqq인 속성의 값을 안녕하세요로 지정한다.
+            img1.setAttribute("title", "하하하하");    // 속성의 값이 이미 있다면 값을 변경한다.
+        }
+
+        function f3() {
+            var li1 = document.getElementById("li1");
+            /*
+            li1.style.color = "blue";
+            li1.style.fontFamily = "궁서";
+            li1.style.fontSize = "30px";
+            */
+            li1.setAttribute("class", "xxx1");
+        }
+    </script>
+</head>
+<body>
+<img id="img1" src="../images/fun/1628a2d32ab46d26b.gif">
+<ul id="u1">
+    <li class="c1">안녕하세요</li>
+    <li class="c1">안녕하세요</li>
+    <li id="li1">안녕하세요</li>
+</ul>
+<ul id="u2">
+    <li>반갑습니다</li>
+    <li class="c1">반갑습니다</li>
+    <li>반갑습니다</li>
+    <button onclick="f1()">버튼1</button>
+    <button onclick="f2()">버튼2</button>
+    <button onclick="f3()">버튼3</button>
+</ul>
+</body>
+</html>

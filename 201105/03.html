@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .fontShape {
+            color: red;
+            font-family: "궁서";
+            font-size: "30px";
+        }
+
+        .size {
+            background-color: grey;
+            height: 200px;
+            width: 200px;
+        }
+
+        .borderShape {
+            border: 3px solid green;
+        }
+    </style>
+    <script>
+        function f1() {
+            var box1 = document.getElementById("box1");
+            var classValue = box1.getAttribute("class");
+            if (classValue == null) {    // 예외처리
+                classValue = "fontShape";
+            } else {
+                classValue += " fontShape";
+            }
+
+            box1.setAttribute("class", classValue);
+        }
+
+        function f2() {
+            var box1 = document.getElementById("box1");
+            var classValue = box1.getAttribute("class");
+            if (classValue == null) {
+                classValue = "size";
+            } else {
+                classValue += " size";
+            }
+            box1.setAttribute("class", classValue);
+        }
+
+        function f3() {
+            var box1 = document.getElementById("box1");
+            var classValue = box1.getAttribute("class");
+            if (classValue == null) {
+                classValue = "borderShape";
+            } else {
+                classValue += " borderShape";
+            }
+            box1.setAttribute("class", classValue);
+        }
+    </script>
+</head>
+<body>
+<div id="box1">안녕하세요</div>
+<button onclick="f1()">글자 모양 바꾸기</button>
+<button onclick="f2()">크기 바꾸기</button>
+<button onclick="f3()">테두리 그리기</button>
+</body>
+</html>
