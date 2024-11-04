@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #box1 {
+                background-color: red;
+                height: 100px;
+                width: 100px;
+                /* transform: rotate(30deg); */
+                /* transform: scale(2, 2); */
+                /* transform: skew(-50deg, 10deg); */
+                /* transition: transform 2s, width 5s; */
+                /* ransition: background-color 1s; */
+                position: relative;
+                transition: transform 3s, left 3s;    /* transition: 애니메이션의 속도 조절 */
+            }
+            #box1:hover {
+                left: 500px;
+                background-color: blue;
+                transform: rotate(90deg);    /* 엘리먼트의 크기, 위치, 모양을 변경하는 속성 */
+                /* width: 300px; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>               
+    </body>
+</html>

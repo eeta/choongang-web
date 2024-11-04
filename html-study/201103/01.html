@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #box1 {
+                border: 1px solid red;
+                display: inline-block;    /* inline-block: 높이, 너비가 content만큼. 레이아웃 용도로는 잘 안 씀 */
+            }
+            #box2 {
+                border: 1px dotted green;
+                border-width: thick;
+                /* display: none; 아예 사라짐. 해당 공간도 존재하지 않음 */
+                display: inline;
+                visibility: hidden;    /* 보이지 않음. 해당 공간은 존재함 */
+            }
+            #box3 {
+                border: 1px ridge black;
+                display: block;    /* default 속성 */
+            }
+        </style>
+    </head>
+    <body>       
+        <div>
+            <div id="box1">안녕하세요1</div>
+            <div id="box2">안녕하세요2</div>
+            <div id="box3">안녕하세요3</div>
+        </div>
+        <div>
+    </body>
+</html>

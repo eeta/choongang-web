@@ -1,0 +1,44 @@
+<!DOCTYPE html>    <!-- 블로그에 올라옴.. -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function f1() {
+            var ul1 = document.getElementById("ul1");
+            var li = document.createElement("li");
+            // li.innerHTML = "<span>안녕하세요 </span><span> x </span>"    // 쓰지 마세요
+            var contentBox = document.createElement("span");
+            contentBox.innerText = "안녕하세요" + parseInt(Math.random() * 1000);
+            li.appendChild(contentBox);
+            var xBox = document.createElement("span");
+            xBox.innerText = " X ";
+            xBox.setAttribute("onclick", "f2(this)");    // ??this?  span 박스가 넘길 때.. 자기 자신이 됨???
+            // 클릭하면.. onclick해서 작동된 걸 this로 받는 span??
+            li.appendChild(xBox);
+
+            ul1.appendChild(li);
+        }
+
+        /*
+        function f2(index) {
+            var ul1 = document.getElementById("ul1");
+            ul1.removeChild(ul1.children[index]);
+        }
+        */
+        function f2(event) {
+            // console.log(event)
+
+            // var ul1 = document.getElementById("ul1");
+            // ul1.removeChild(event.parentElement);
+            event.style.color = "red";
+            event.innerText = "안녕하세요";
+        }
+    </script>
+</head>
+<body>
+<ul>
+    <button onclick="f1()">추가</button>
+    <ul id="ul1"></ul>
+</ul>
+</body>
+</html>

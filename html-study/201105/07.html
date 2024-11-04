@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #box1 {
+            background-color: cornflowerblue;
+            height: 100px;
+            position: relative;
+            width: 100px;
+        }
+
+        #box2 {
+            background-color: yellowgreen;
+            height: 100px;
+            position: relative;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function movePosition() {
+            var box1 = document.getElementById("box1");
+            box1.style.left = "100px";
+        }
+
+        function f1() {
+            setTimeout(movePosition, 1000);    // 3000ms '후' movePosition을 내부에서 호출하겠다
+        }
+
+
+        var inter1 = null;
+
+        function f2() {
+            if (inter1 == null) {
+                inter1 = setInterval(box2Move, 1000 / 60);    // 프레임    일반적으로는 뜯어내야 함...?
+            } else {
+                clearInterval(inter1);
+                inter1 = null;
+            }
+        }
+
+        var value = 0;
+
+        function box2Move() {
+            value += 1;
+            var box2 = document.getElementById("box2");
+            box2.style.left = value + "px";    // JS 항상 문자 형태로 들어가야
+        }
+    </script>
+</head>
+<body>
+<div id="box1" onclick="f1()"></div>
+<div id="box2" onclick='f2()'></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+    function f1() {
+        console.log("f1 호출됨");
+    }
+
+    function f2() {
+        console.log("f2 호출됨");
+        return "하하하";
+    }
+
+    f2();
+
+    var xx1 = f1();
+    var xx2 = f2();
+
+    console.log(xx1);    // f1 호출됨
+    console.log(xx2);    // f2 호출됨
+
+    var xx3 = undefined;    // 정의가 안 되었다. null과는 다름
+</script>

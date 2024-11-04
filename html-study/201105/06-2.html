@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        // (event) 사용
+        window.onload = function () {    // 익명 함수를 만들어서 onload에 엮어넣음..
+            var bbb = document.getElementById("box1");
+            bbb.style.backgroundColor = "red";
+
+            bbb.onclick = f1;
+        };
+
+        function f1(event) {    // event 객체가 날아옴..
+
+            console.log(event);
+
+            alert("안녕하세요");
+            var box1 = document.getElementById("box1");
+            event.target.onclick = f2;
+        }
+
+        function f2(event) {
+
+            console.log(event);
+
+            alert("반갑습니다");
+            var box1 = document.getElementById("box1");
+            event.target.onclick = f1;
+        }
+    </script>
+</head>
+<body>
+<button id="box1" onclick="f1()">안녕하세요</button>
+</body>
+</html>

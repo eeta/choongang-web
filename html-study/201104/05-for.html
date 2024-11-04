@@ -1,0 +1,24 @@
+<script>
+    var arr = [];
+    arr.push(10);
+    arr.push(20);
+    arr.push(30);
+    arr.push(40);
+    arr.push(50);
+
+    // for문 (사용 X)
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    // 고전적 향상된 for문: in (사용 X)
+    // 자바스크립트에만 있음. 순차적으로 index를 뽑아옴
+    for (var i in arr) {
+        console.log(arr[i]);
+    }
+
+    // 정상적 향상된 for문: of
+    for (var value of arr) {
+        console.log(value);
+    }
+</script>

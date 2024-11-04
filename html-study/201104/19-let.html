@@ -1,0 +1,16 @@
+<script>
+
+    // ES6: let, const, class
+    // let
+    var a = 10;    // 좀 이상.. window 객체에 붙어버리는.. window.a
+    let b = 20;    // 지역 변수
+    console.log(a);
+    console.log(b);
+
+    if (10 > 5) {
+        var c = 10;
+        let d = 20;    // 지역 변수. if문 빠져나가면 소멸되므로 d is not defined
+    }
+    console.log(c);
+    console.log(d);
+</script>

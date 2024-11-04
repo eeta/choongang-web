@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #box1 {
+                background-color: blue;
+                border-radius: 40px 10px 40px 10px;
+                height: 100px;
+                width: 100px;
+            }
+            #t1 {
+                border-radius: 10px;
+                font-family: '궁서';
+                text-shadow: 0 0 7px red;
+                width: 300px;
+            }
+            #t1:focus {    /* focus: 해당 요소를 클릭할 때 스타일 변경 */
+                box-shadow: 10px 10px 30px blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1"></div> <br>
+        <input id="t1" type="text">
+    </body>
+</html>

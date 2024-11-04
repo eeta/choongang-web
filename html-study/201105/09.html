@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function f1() {
+            // Vanilla JS
+            var arrLi = document.getElementsByClassName("test");
+            for (var li of arrLi) {
+                li.style.color = "red";
+                li.innerText = "반갑습니다";
+            }
+        }
+
+        function f2() {
+            // jQuery
+            $(".test").css("color", "red").text("반갑습니다");    // 함수 호출. 함수명이 $표시임
+        }
+    </script>
+</head>
+<body>
+<ul>
+    <button onclick="f1()">버튼1</button>
+    <button onclick="f2()">버튼2</button>
+    <li class="test">안녕하세요</li>
+    <li class="test">안녕하세요</li>
+    <li>안녕하세요</li>
+    <li>안녕하세요</li>
+    <li class="test">안녕하세요</li>
+    <li>안녕하세요</li>
+    <li>안녕하세요</li>
+    <li class="test">안녕하세요</li>
+    <li>안녕하세요</li>
+    <li>안녕하세요</li>
+</ul>
+</body>
+</html>

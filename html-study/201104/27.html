@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf=8">
+    <style></style>
+    <script>
+        function f1() {
+            // 아직은 시기상조인 API~~
+
+            // var xxx = document.getElementById("u1");
+            // var lis = xxx.getElementsByTagName("li");
+
+            // JQuery 대항해서 나온 표준 API
+
+            //document.querySelectorAll(".c1");
+            // JQuery 대항해서 나온 표준 API
+            var boxes = document.querySelectorAll("#u1 li:nth-child(2n+1)");
+            for (var box of boxes) {
+                box.style.backgroundColor = "red";
+            }
+        }
+    </script>
+
+</head>
+<body>
+<ul id="u1">
+    <li>안녕하세요</li>
+    <li class="c1">안녕하세요</li>
+    <li>안녕하세요</li>
+    <li>안녕하세요</li>
+    <li class="c1">안녕하세요</li>
+</ul>
+<ul id="u2">
+    <li>반갑습니다</li>
+    <li>반갑습니다</li>
+    <li class="c1">반갑습니다</li>
+    <li>반갑습니다</li>
+    <li>반갑습니다</li>
+</ul>
+<button onclick="f1()">테스트</button>
+</body>
+</html>
